@@ -137,7 +137,6 @@ and should return a new array that is identical to the old array. You can name t
 const flavorDuplicate = [...originalFlavors];
 
 function copy(originalFlavors, flavorDuplicate) {
-	/*code here*/
 	flavorDuplicate = [...originalFlavors];
 	return flavorDuplicate;
 }
@@ -158,9 +157,18 @@ DO NOT USE ADVANCED ARRAY METHODS (i.e. .filter) to solve this problem.
 
 hint - you can use the .includes method to help you solve this */
 
-function filterByWord(/*code here*/) {
-	/*code here*/
+const selectedFlavors = [];
+
+function filterByWord(originalFlavors, flavor) {
+	for (i = 0; i < originalFlavors.length; i++) {
+		if (originalFlavors[i].includes(flavor)) {
+			selectedFlavors.push(originalFlavors[i]);
+		}
+	}
+	return selectedFlavors;
 }
+
+filterByWord(originalFlavors, 'Chocolate');
 
 /* 🧁🍦🍨 STRETCH 🍨🍦🍫*/
 
